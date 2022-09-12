@@ -1,0 +1,12 @@
+version: "3"
+services:
+  worker:
+    build: .
+    restart: always
+    environment:
+      PYTHONUNBUFFERED: 1
+      TELEGRAM_TOKEN: "YOUR_TELEGRAM_TOKEN"
+      TELEGRAM_CHAT_ID: "YOUR_TELEGRAM_CHAT_ID"
+      TRACKING_NUMBERS: "YOUR_TRACKING_NUMBERS"
+    volumes:
+      - .:/usr/src/app
